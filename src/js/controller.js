@@ -62,7 +62,6 @@ const controlSearchResults = async function () {
 };
 
 const controlPagination = function (goToPage) {
-  console.log(goToPage);
   // 1) Render new results
   // resultsView.render(model.state.search.results);
   resultsView.render(model.getSearchResultsPage(goToPage));
@@ -105,7 +104,7 @@ const controlAddRecipe = async function (newRecipe) {
 
     // Upload new recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
+    // console.log(model.state.recipe);
 
     // Render recipe
     recipeView.render(model.state.recipe);
